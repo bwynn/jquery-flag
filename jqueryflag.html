@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Loopy Flag</title>
+<style>
+.flagContainer {
+	width: 1000px;
+	height: 600px;
+	border: 2px solid black;
+	overflow: hidden;
+	}
+ul {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	}
+ul li {
+	height: 46.5px;
+	}
+li:nth-child(odd) {
+	background-color: #CC3232;
+	}
+#blueBox {
+	width: 400px;
+	height: 54.4%;
+	background-color: #21298F;
+	position: relative;
+	top: -600px;
+	overflow: hidden;
+	}
+.star {
+	margin-left: 25px;
+	margin-top: 18px;
+    position: relative;
+	top: 7px;
+	left: -10px;
+	display: block;
+    color: white;
+	float: left;
+    width: 0px;
+    height: 0px;
+    border-right:  20px solid transparent;
+    border-bottom: 14px  solid white;
+    border-left:   20px solid transparent;
+    -moz-transform:    rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform:     rotate(35deg);
+    -o-transform:      rotate(35deg);
+	}
+.star:before {
+	border-bottom: 16px solid white;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -11px;
+    left: -13px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform:    rotate(-35deg);
+    -ms-transform:     rotate(-35deg);
+    -o-transform:      rotate(-35deg);
+	}
+.star:after {
+	position: absolute;
+    display: block;
+    color: red;
+    top: 0px;
+    left: -20px;
+    width: 0px;
+    height: 0px;
+    border-right: 20px solid transparent;
+    border-bottom: 14px solid white;
+    border-left: 20px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform:    rotate(-70deg);
+    -ms-transform:     rotate(-70deg);
+    -o-transform:      rotate(-70deg);
+    content: '';
+	}
+.star:nth-child(n + 7) {
+	margin-left: 28px;
+	position: relative;
+	left: 14px;
+	}
+.star:nth-child(n + 12) {
+	margin-left: 26px;
+	left: -12px;
+	}
+.star:nth-child(n + 18) {
+	margin-left: 27px;
+	left: 22px;
+	}
+.star:nth-child(n + 23) {
+	margin-left: 26px;
+	left: -12px;
+}
+.star:nth-child(n + 23) {
+	margin-left: 26px;
+	left: -12px;
+}
+.star:nth-child(n + 29) {
+	margin-left: 27px;
+	left: 19px;
+}
+.star:nth-child(n + 34) {
+	margin-left: 26px;
+	left: -12px;
+}
+.star:nth-child(n + 40) {
+	margin-left: 27px;
+	left: 19px;
+}
+.star:nth-child(n + 45) {
+	margin-left: 26px;
+	left: -12px;
+}
+</style>
+</head>
+
+<body>
+<div class="flagContainer">
+        <ul id="stripes">
+        </ul>
+        <div id="blueBox">
+        </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		
+		$stripes = $("#stripes");
+		
+		var i = 0;
+		for ( i = 0; i < 13; i++) {
+			$stripes.append('<li></li>');
+		}	
+		
+		$blueBox = $('#blueBox');
+		
+		var i = 0;
+		for ( i = 0; i < 50; i++ ) {
+			$blueBox.append('<span class="star"></span>');
+			}
+		
+		});
+</script>
+</body>
+</html>
